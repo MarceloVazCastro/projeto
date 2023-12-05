@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="../css/tarefas.css">
+    <script src="https://unpkg.com/tooltip.js@1.3.1"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/6ed79fc32f.js" crossorigin="anonymous"></script>
+    <!--
+            Feito por: Renato Matos Alves Penna
+            Função da página: Quadro de tarefas para serem feitas
+        -->
+</head>
+
+<body>
+    <nav>
+        <section class="container-fluid">
+            <div class="row " id="navbar" style=" background-color: rgb(180, 19, 19);">
+                <h1 class="text-light"> <a href="../html/index.html" class="text-light">Click Jobs</a> </h1>
+                
+            </div>
+        </section>
+    </nav>
+
+
+    <main>
+
+        <div class="row">
+            <aside class="col-md-2" id="aside">
+                <!--Preencher com oque quiser futuramente-->
+            </aside>
+
+            <div class="col-md-8" id="principal">
+                <h1>Tarefas Urgentes</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                    <h5>Página para publicar seu serviço requisitado e encontrá-lo rapidamente!</h5> 
+                    </div>
+                </div>
+                <!--Botao cadastrar tarefa-->
+                <div class="d-grid gap-2 p-4">
+                    <button class="btn btn-primary" type="button" id="btncadastro-tarefa"
+                        style="max-width: 100%; margin-left: auto;margin-right: auto;">Cadastrar tarefas</button>
+                    
+                </div>
+
+                
+                <!--POPUP CADASTRO TAREFAS-->
+                <div id="popup-overlay">
+                    <div class="popup" id="popup">
+                        <div class="container-fluid" id="cadastrar-tarefas">
+                            <button class="btn btn-outline-dark" id="btnvoltar"><strong>Voltar</strong></button>
+                            <h2>Cadastrar Tarefas</h2>
+                            <label for="tarefa"><strong>Digite sua tarefa:</strong></label>
+                            <textarea id="tarefa" class="form-control" placeholder="Especifique suas necessidades" style="padding: 5px; height: 300px;"></textarea required>
+
+
+                            <label for="data"><strong>Para quando?</strong></label>
+                            <input type="date" id="data" class="form-control" placeholder="Data" style="padding: 5px; width: 300px;" required>
+
+                            <label for="profissao" ><strong>Preciso de:</strong></label>
+                            <select class="form-select" aria-label="Default select example" id="selectbox">
+                                <option value="0" selected>Escolha a profissao</option>                               
+                            </select>
+                            <label for="TelefoneContato"><strong>Telefone de Contato:</strong></label><br>
+                            <input  class="form-control" style="padding: 5px; width: 300px;" id="TelefoneContato" type="tel" pattern="\(\d{2}\) \d{5}-\d{4}" required placeholder="Sem espaços e nem (Parênteses)"><br>
+                            
+
+                            <button class="btn btn-primary" type="button" id="enviar-tarefa" >Enviar tarefa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-md-12" style="padding: 50px;">
+                            <h2>Tarefas Cadastradas:</h2>
+                            
+
+                            <!--TAREFAS AQUI-->
+                            <div class="row" id="lista-tarefas">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="col-md-2">
+            <!--Preencher com oque quiser futuramente-->
+
+            </aside>
+
+        </div>
+
+        
+
+
+    </main>
+<!--Footer-->
+<footer class="bg-light">
+    <section class="p-1">
+      <div class="container text text-center mt-5">
+        <div class="row">
+          <!--Sobre nós-->
+          <div class="col-md-4 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Sobre Nós
+            </h6>
+            <p>ClickJobs é uma aplicação web para encontrar o seu trabalhador ideal para o serviço exigido. O trabalho foi desenvolvido através do Trabalho Interdisciplinar: Aplicações Web</p>
+          </div>
+         
+          <!-- Redes Sociais -->
+          <div class="col-md-6 mx-auto mb-6">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Integrantes Do Grupo
+            </h6>
+            <p>Renato Matos - Engenharia de Software</p>
+            <p>Davi Aguilar - Engenharia de Software</p>
+            <p>Kauã Pataro - Engenharia de Software</p>
+            <p>Marcelo Vaz - Engenharia de Software</p>
+            <p>Pedro Araújo - Engenharia de Software</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  
+  
+    <!--Copyright-->
+    <div class="bg-light-subtle text-center">
+      © 2023 Copyright ClickJobs
+      
+    </div>
+  
+
+    <script src="../javascript/tarefas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

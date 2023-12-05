@@ -1,0 +1,38 @@
+div#navbar{
+    background-color: rgb(180, 19, 19);
+}
+img.imagem{
+    height: 25rem;
+}
+.card{
+    
+
+    margin: 5px 5px;
+     background-color: rgb(255, 248, 248);
+     border: 3px solid rgb(224, 205, 205);
+     height: 550px;
+     box-shadow: rgb(187, 181, 181) 0.5em 0.2em 0.3em;
+     margin-bottom: 10px;
+    
+ }
+ #tela{
+    justify-content: center;
+   max-width: 1300px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   vertical-align: top;
+   margin: 0 auto;
+ }
+ .card img {
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    height: 250px;
+    width: 300px;
+    border-radius: 5%;
+}
+

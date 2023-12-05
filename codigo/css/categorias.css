@@ -1,0 +1,78 @@
+/*
+- Author: Davi Aguilar Nunes Oliveira
+ - 
+ - Date: 04/06/2023
+ -
+ - From: categorias.html
+ -
+ - Function: Css para página de categorias
+ -
+ - Updates:
+     author:
+     Date:
+     updates description:
+*/
+
+
+#navbar {
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(9, 9, 121);
+    background: linear-gradient(0deg, rgba(9, 9, 121, 1) 14%, rgba(0, 0, 0, 1) 50%, rgba(255, 0, 0, 1) 93%);
+    width: auto;
+    height: auto;
+    -webkit-text-stroke: 5px red;
+}
+
+#Click_Jobs {
+    font-size: 90pt;
+    color: white;
+    text-align: center;
+
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(/0b71f4db26e77b8da823748623b65dcb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#backnav {
+    background-color: rgb(255, 0, 0);
+
+}
+
+#Cabecalho {
+    background-color: rgb(255, 0, 0);
+    -webkit-text-stroke: 3px blue;
+    text-align: center;
+    font-size: 60pt;
+    color: whitesmoke;
+
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 30pt;
+    font-style: inherit;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 161, 248);
+    -webkit-text-stroke: 1px red;
+}
+
+#categorias_conteiner {
+    text-align: center;
+
+}

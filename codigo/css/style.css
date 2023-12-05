@@ -1,0 +1,98 @@
+/*
+- Author: Davi Aguilar Nunes Oliveira
+ - 
+ - Date: 15/05/2023
+ -
+ - From: cadastro_cliente.html
+ -
+ - Function: Css para página de cadastro de cliente
+ -
+ - Updates:
+     author:
+     Date:
+     updates description:
+*/
+
+#navbar {
+    background-color: rgb(162, 54, 54);
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    text-align: center;
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(27,166,58);
+    background: linear-gradient(0deg, rgba(255, 88, 88) 0%, rgba(255, 54, 54) 100%);
+}
+
+#Click_Jobs {
+    background-color: black;
+    color: rgb(162,54,54);
+    font-size: 60pt;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#footer {
+    background-color: black;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body, main, .row{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#tituloformulario {
+    text-align: center;
+    color: rgb(255, 54, 54);
+    font-size: 25pt;
+}
+
+.form-group, .form-control{
+    opacity: 0.9;
+}
+
+.tipolocal {
+    opacity: 0.7 ;
+}
+#botaoSubmit {
+    background-color: rgb(242, 16, 16);
+    color: white;
+    width: 100%;
+}
+
+#tipolocal {
+    width: 100%;
+}
+
+strong {
+    font-size: 20pt;
+    
+}
+
+input:hover, select:hover{
+    opacity: 1;
+}
+
+#Click_Jobs:hover, #titulopagina:hover, h1:hover{
+    color: red;
+    
+}
+
+h1{
+    color: white;
+}
+
+
+
+
+
+
+

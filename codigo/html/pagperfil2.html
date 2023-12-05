@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/terceiro.css">
+    
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/6ed79fc32f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <navbar>
+    <section class="container-fluid">
+      <div class="row " id="navbar" style=" background-color: rgb(180, 19, 19);">
+        <h1 class="col-9 mt-5"> <a href="index.html" class="text-light">ClickJobs</a></h1>
+        <img src="imgs/Captura de tela 2023-05-10 191301.png" id="logo" class="col-3" alt="">
+      </div>
+    </section>
+  </navbar>
+
+  <a href=""></a>
+
+  <div class="d-flex justify-content-center align-items-center" style="margin-top: 40px;">
+    <div class="d-flex flex-column align-items-center">
+      <img id="imagem-perfil" src="ícone-de-perfil-do-avatar-padrão-vetor-mídia-social-usuário-retrato-176256935.jpg" class="rounded-circle img-perfil" alt="Imagem arredondada" width="20%"> 
+      <div class="imagem-perfil"></div> 
+      
+      <form>
+        <input type="file" id="escolher-foto"><br>
+      </form>
+    </div>
+  </div>
+
+  <h1 id="nomeperfil"></h1>
+  <br>
+  <div>
+   
+    <h3>Telefone:</h3><p id="telefone"></p>
+    <h3>Email:</h3><p id="email"></p>
+  </div>
+  <div>
+    <h4>DESCRIÇÃO:</h4>
+    <input class="form-control" id="descricao" type="search" placeholder="Escreva aqui sua descricao" aria-label="Search">
+    <button class="btn btn-outline-dark" id="botao" type="submit" title="busca">Salvar Alterações</button>
+  </div>
+
+  
+  <!--Footer-->
+<footer class="bg-light">
+  <section class="p-1">
+    <div class="container text text-center mt-5">
+      <div class="row">
+        <!--Sobre nós-->
+        <div class="col-md-4 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Sobre Nós
+          </h6>
+          <p>ClickJobs é uma aplicação web para encontrar o seu trabalhador ideal para o serviço exigido. O trabalho foi desenvolvido através do Trabalho Interdisciplinar: Aplicações Web</p>
+        </div>
+       
+        <!-- Redes Sociais -->
+        <div class="col-md-6 mx-auto mb-6">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Integrantes Do Grupo
+          </h6>
+          <p>Renato Matos - Engenharia de Software</p>
+          <p>Davi Aguilar - Engenharia de Software</p>
+          <p>Kauã Pataro - Engenharia de Software</p>
+          <p>Marcelo Vaz - Engenharia de Software</p>
+          <p>Pedro Araújo - Engenharia de Software</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+
+  <!--Copyright-->
+  <div class="bg-light-subtle text-center">
+    © 2023 Copyright ClickJobs
+    
+  </div>
+
+  <script>
+
+function convertImageToBase64(imageFile, callback) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var base64Image = e.target.result;
+    callback(base64Image);
+  }
+  reader.readAsDataURL(imageFile);
+}
+
+function sendPUTRequest(descricao, base64Image) {
+  
+  var queryString = window.location.search;
+  var params = new URLSearchParams(queryString);
+  var provedorId = params.get('id');
+
+  var data = {
+    id: provedorId,
+    nome,
+    email,
+    telefone,
+    cpf ,
+    senha,
+    tipoLocal,
+    endereco,
+    complemento,
+    numcasa,
+    bairro,
+    texto: descricao,
+    imagem: base64Image,
+    
+  };
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("PUT", `https://apidotiaw.daviaguilar1.repl.co/Usuarios/${provedorId}`, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // A resposta do servidor foi recebida com sucesso
+      console.log(xhr.responseText);
+    }
+  };
+
+  xhr.send(JSON.stringify(data));
+}
+
+document.getElementById('botao').addEventListener('click', function() {
+  var descricao = document.querySelector('#descricao').value;
+  var imagemPerfil = document.getElementById("imagem-perfil");
+  var novaImagem = document.getElementById("escolher-foto").files[0];
+
+  convertImageToBase64(novaImagem, function(base64Image) {
+    sendPUTRequest(descricao, base64Image);
+    //atualizapag
+    imagemPerfil.setAttribute("src", base64Image);
+  });
+});
+
+// Obtém os dados do provedor e preenche os campos na página
+var queryString = window.location.search;
+var params = new URLSearchParams(queryString);
+var provedorId = params.get('id');
+
+
+
+var nome = "";
+var email = "";
+var telefone = "";
+var cpf = "";
+var senha ="";
+var tipoLocal ="";
+var endereco = "";
+var complemento= "" ;
+var numcasa = "" ;
+var bairro="";
+var id = "";
+
+
+
+
+
+
+
+fetch(`https://apidotiaw.daviaguilar1.repl.co/Usuarios/${provedorId}`)
+  .then(res => res.json())
+  .then(data => {
+    let APIresponse = data;
+    nome = APIresponse.nome;
+    email = APIresponse.email;
+    telefone = APIresponse.telefone;
+    cpf =APIresponse.cpf;
+    senha =APIresponse.senha
+    tipoLocal =APIresponse.tipoLocal; 
+    endereco =APIresponse.endereco;
+    complemento =APIresponse.complemento;
+    numcasa =APIresponse.numcasa;
+    bairro =APIresponse.bairro;
+    id = APIresponse.id;
+    imagem = APIresponse.imagem;
+     descricao = APIresponse.texto;
+    
+     if(imagem!=='')
+     {
+      imagem=`<img id="imagem-perfil" src="${imagem}" class="rounded-circle img-perfil" alt="Imagem arredondada" width="20%">`
+      document.getElementById('imgPerfil').innerHTML = imagem;
+     }
+
+
+    
+    document.getElementById('nomeperfil').innerHTML = nome;
+    document.getElementById('telefone').innerHTML = telefone;
+    document.getElementById('email').innerHTML = email;
+  });
+
+
+
+
+     
+  </script>
+</body>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+ rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</html>

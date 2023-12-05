@@ -1,0 +1,28 @@
+{
+    "categorias": [
+        {
+            "Profissao": "Pedreiros"
+        },
+        {
+            "Profissao": "Marceneiro" 
+        },
+        {
+            "Profissao": "Garçon"
+        },
+        {
+            "Profissao": "Ferreiro"
+        },
+        {
+            "Profissao": "Babá"
+        },
+        {
+            "Profissao": "Engenheiro"
+        },
+        {
+            "Profissao": "Pintor"
+        },
+        {
+            "Profissao": "Transportador"
+        }
+    ]
+}

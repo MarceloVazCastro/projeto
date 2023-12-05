@@ -1,0 +1,44 @@
+{
+  "perfil": [
+    {
+      "id": "generateId()",
+      "nome": "",
+      "servicos": "",
+      "autonomo": "",
+      "empresa": "",
+      "nomeEmpresaLoja": "",
+      "email": "",
+      "telefone": "",
+      "cpf": "",
+      "senha": "",
+      "cep": ""
+    },
+    {
+      "id": 1,
+      "nome": "Pedro",
+      "servicos": "Pedreiro",
+      "autonomo": true,
+      "empresa": false,
+      "nomeEmpresaLoja": "",
+      "email": "pedrofranco@gmail.com",
+      "telefone": "31987887654",
+      "cpf": "684.704.800-06",
+      "senha": "Kaua2003.",
+      "cep": "30320060"
+    },
+    {
+      "id": 2,
+      "nome": "Kaua Pataro Pereira Faria",
+      "servicos": "Pedreiro",
+      "autonomo": true,
+      "empresa": false,
+      "nomeEmpresaLoja": "",
+      "email": "patarokaua@gmail.com",
+      "telefone": "31998787038",
+      "cpf": "09651642688",
+      "senha": "Kaua2003.",
+      "cep": "30320060"  
+      
+    }
+]
+}

@@ -1,0 +1,54 @@
+
+.card{
+    width: 300px;
+
+    margin: 10px 10px;
+     background-color: rgb(255, 248, 248);
+     border: 3px solid rgb(224, 205, 205);
+     height: 350px;
+     box-shadow: rgb(187, 181, 181) 0.5em 0.5em 0.3em;
+ }
+
+
+.flex{
+
+   justify-content: center;
+   max-width: 1000px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   vertical-align: top;
+   margin: 0 auto;
+   
+
+}
+.titulo{
+    text-align: center;
+    color: rgb(66, 3, 3);
+}
+.paragrafo{
+    text-align: center;
+    color: rgb(66, 3, 3);
+}
+.card img{
+    padding: 10px;
+    height: 170px;
+    width: 300px;
+    
+}
+.card a{
+    text-align: center;
+
+}
+.principal{
+    text-align: center;
+}
+
+.nav-item:hover, #botaobuscanav:hover{
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

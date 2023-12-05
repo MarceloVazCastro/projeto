@@ -1,0 +1,30 @@
+/*
+- Author: Davi Aguilar Nunes Oliveira
+ - 
+ - Date: 04/06/2023
+ -
+ - From: categorias.html
+ -
+ - Function: Servidor para exibição de categorias
+ -
+ - Updates:
+     author:
+     Date:
+     updates description:
+*/
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Rota de exemplo
+app.get('/api/categorias', (req, res) => {
+  // Aqui você pode retornar os dados da sua API
+  const categorias = ['Categoria 1', 'Categoria 2', 'Categoria 3'];
+  res.json(categorias);
+});
+
+// Inicia o servidor
+app.listen(port, () => {
+  console.log(`API rodando em http://localhost:${port}`);
+});
